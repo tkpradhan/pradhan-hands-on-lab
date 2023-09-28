@@ -1,0 +1,64 @@
+steps:
+  REGION-ed4f2c6c-b6b2-4759-9cf4-260ef4971ea7:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Region data as defined by TPC-H
+      locationID: ""
+      locationName: SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0105a2c6-d6bc-4b6e-9556-29a7ce6455fd
+              stepCounter: ed4f2c6c-b6b2-4759-9cf4-260ef4971ea7
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: R_REGIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c3fae004-f327-4479-b5e1-7765905b5b69
+              stepCounter: ed4f2c6c-b6b2-4759-9cf4-260ef4971ea7
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: R_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f2dc12f0-df37-4a7c-b3a7-04c057e6f5f7
+              stepCounter: ed4f2c6c-b6b2-4759-9cf4-260ef4971ea7
+            config: {}
+            dataType: VARCHAR(152)
+            defaultValue: ""
+            description: ""
+            name: R_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SRC', 'REGION') }}
+      name: REGION
+      schema: ""
+      sqlType: Source
+      table: REGION
+      type: sourceInput
+    stepCounter: ed4f2c6c-b6b2-4759-9cf4-260ef4971ea7
